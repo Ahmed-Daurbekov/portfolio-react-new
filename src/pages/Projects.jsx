@@ -10,6 +10,8 @@ import project7 from '../img/projects/project-7.png'
 import project8 from '../img/projects/project-8.png'
 import project9 from '../img/projects/project-9.png'
 import project10 from '../img/projects/project-10.png'
+import project11 from '../img/projects/project-11.png'
+import project12 from '../img/projects/project-12.png'
 
 const Projects = () => {
     let [btnText, setBtnText] = useState(false)
@@ -18,6 +20,30 @@ const Projects = () => {
         <div className='projects-page'>
             <p className='projects-page__title'>Мои проекты</p>
             <div className='projects-page__project-blocks'>
+                <div className='projects-page__project-blocks__block'>
+                    <div onMouseEnter={e => addHover(e)} onMouseLeave={e => removeHover(e)} className='projects-page__project-block projects-page__project-block_project-1'>
+                        <div className='block-img'>
+                            <img src={project12} />
+                        </div>
+                        <div className='text-block'>
+                            <div className='project__name'>Тренажер слепой печати</div>
+                            <a href='https://ahmed-daurbekov.github.io/printing-simulator-new/' target='_blank' className='project__link'>Посмотреть</a>
+                        </div>
+                    </div>
+                    <button onClick={event => btnAddActiveClass(btnText, setBtnText, event)} className='showInfo'>{btnText ? 'Скрыть ссылку' : 'Показать ссылку'}</button>
+                </div>
+                <div className='projects-page__project-blocks__block'>
+                    <div onMouseEnter={e => addHover(e)} onMouseLeave={e => removeHover(e)} className='projects-page__project-block projects-page__project-block_project-1'>
+                        <div className='block-img'>
+                            <img src={project11} />
+                        </div>
+                        <div className='text-block'>
+                            <div className='project__name'>Игра крестики нолики</div>
+                            <a href='https://ahmed-daurbekov.github.io/tic-toe/' target='_blank' className='project__link'>Посмотреть</a>
+                        </div>
+                    </div>
+                    <button onClick={event => btnAddActiveClass(btnText, setBtnText, event)} className='showInfo'>{btnText ? 'Скрыть ссылку' : 'Показать ссылку'}</button>
+                </div>
                 <div className='projects-page__project-blocks__block'>
                     <div onMouseEnter={e => addHover(e)} onMouseLeave={e => removeHover(e)} className='projects-page__project-block projects-page__project-block_project-1'>
                         <div className='block-img'>
@@ -30,6 +56,7 @@ const Projects = () => {
                     </div>
                     <button onClick={event => btnAddActiveClass(btnText, setBtnText, event)} className='showInfo'>{btnText ? 'Скрыть ссылку' : 'Показать ссылку'}</button>
                 </div>
+                
                 <div className='projects-page__project-blocks__block'>
                     <div onMouseEnter={e => addHover(e)} onMouseLeave={e => removeHover(e)} className='projects-page__project-block projects-page__project-block_project-1'>
                         <div className='block-img'>
